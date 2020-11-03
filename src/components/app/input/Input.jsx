@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Input = ({ text }) => (
+const Input = ({ text, onSubmit }) => (
   <>
     <label htmlFor="text" placeholder="Enter username">Search:</label>
     <input
