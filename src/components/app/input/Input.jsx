@@ -15,7 +15,8 @@ const Input = ({ text, onSubmit }) => (
 );
 
 Input.propTypes = {
-  text: PropTypes.string.isRequired
+  text: PropTypes.string.isRequired,
+  onSubmit: PropTypes.func.isRequired
 };
 
 export default Input;
