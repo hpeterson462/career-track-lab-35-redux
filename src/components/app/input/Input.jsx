@@ -9,7 +9,7 @@ const Input = ({ text }) => (
       type="text"
       name="text"
       value={text}
-      onChange={onChange}
+      onSubmit={onSubmit}
     />
   </>
 );

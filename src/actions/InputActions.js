@@ -1,5 +1,5 @@
-export const TEXT_CHANGE = 'TEXT_CHANGE';
-export const textChange = text => ({
-  type: TEXT_CHANGE,
+export const TEXT_SUBMIT = 'TEXT_SUBMIT';
+export const textSubmit = text => ({
+  type: TEXT_SUBMIT,
   payload: text
 });
