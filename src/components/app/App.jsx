@@ -1,11 +1,11 @@
 import React from 'react';
-import Input from '../app/input/Input';
+import InputPicker from '../app/input/InputPicker';
 import UserList from '../users/UserList';
 
 export default function App() {
   return (
     <>
-      <Input />
+      <InputPicker />
       <UserList />
     </>
   );

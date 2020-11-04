@@ -1,23 +1,31 @@
-import React, { useReducer } from 'react';
-import { textSubmit } from '../../../actions/InputActions';
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { textSubmit, fetchedUsers } from '../../../actions/InputActions';
 import reducer, { initialState } from '../../../reducers/InputReducer';
 import Input from './Input';
 import Display from './Display';
 
 const InputPicker = () => {
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const text = useSelector(state => state.text.text);
+  const dispatch = useDispatch();
 
-  const handleSubmit = ({ target }) => {
-    if (target.name === 'text') dispatch(textSubmit(target.value));
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    dispatch(fetchedUsers(text));
   };
+
+  const handleChange = (event) => {
+    dispatch(textSubmit(event.target.value));
+  }
 
   return (
     <>
       <Input
-        text={state.text}
-        onClick={handleSubmit}
+        text={text}
+        handleSubmit={handleSubmit}
+        handleChange={handleChange}
       />
-      <Display text={state.text} />
+      <Display text={text} />
     </>
   );
 };

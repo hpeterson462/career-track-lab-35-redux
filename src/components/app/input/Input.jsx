@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Input = ({ text, handleSubmit }) => (
-  <>
+const Input = ({ text, handleSubmit, handleChange }) => (
+  <form onSubmit={handleSubmit}>
     <label htmlFor="text">Search:</label>
     <input
       id="text"
@@ -10,14 +10,16 @@ const Input = ({ text, handleSubmit }) => (
       name="text"
       value={text}
       placeholder="Enter username"
+      onChange={handleChange}
     />
-    <button onClick={handleSubmit}>Submit</button>
-  </>
+    <button>Submit</button>
+  </form>
 );
 
-// Input.propTypes = {
-//   text: PropTypes.string.isRequired,
-//   onClick: PropTypes.func.isRequired
-// };
+Input.propTypes = {
+  text: PropTypes.string.isRequired,
+  handleSubmit: PropTypes.func.isRequired,
+  handleChange: PropTypes.func.isRequired
+};
 
 export default Input;

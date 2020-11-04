@@ -1,15 +1,16 @@
-import { SET_USERS } from '../actions/userActions';
+import { SET_USERS } from '../actions/InputActions';
 
 const initialState = {
-  user: [],
+  users: {},
   error: null
 };
 
-export default function reducer(state = initialState, action) {
+export default function userReducer(state = initialState, action) {
   switch (action.type) {
     case SET_USERS:
-      return { ...state, user: action.payload };
+      console.log(action.payload, 'set-users');
+      return { ...state, users: action.payload };
     default:
       return state;
   }
-}
+};

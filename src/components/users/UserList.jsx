@@ -1,30 +1,25 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchedUsers, setUsers } from '../../actions/userActions';
+import { fetchedUsers } from '../../actions/InputActions';
 import User from './User';
 
 const UserList = () => {
-  const users = useSelector(state => state.users.list);
+  const text = useSelector(state => state.text.text);
+  const users = useSelector(state => state.users.users);
+  // console.log(state.users, 'sstttaaatee');
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchedUsers()
-      .then(users => {
-        dispatch(setUsers(users));
-      }))
+    dispatch(fetchedUsers(text));
   }, []);
 
-  const userElements = users.map(user => (
-    <li key={user.login}>
-      <User {...user} />
-    </li>
-  ));
-
   return (
-    <ul>
-      {userElements}
-    </ul>
+    <div>
+      <p>
+        {JSON.stringify(users)}
+      </p>
+    </div>
   );
 };
 
