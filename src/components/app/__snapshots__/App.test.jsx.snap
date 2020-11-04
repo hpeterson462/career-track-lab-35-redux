@@ -4,15 +4,18 @@ exports[`App component renders App 1`] = `
 <DocumentFragment>
   <label
     for="text"
-    placeholder="Enter username"
   >
     Search:
   </label>
   <input
     id="text"
     name="text"
+    placeholder="Enter username"
     type="text"
     value=""
   />
+  <button>
+    Submit
+  </button>
 </DocumentFragment>
 `;

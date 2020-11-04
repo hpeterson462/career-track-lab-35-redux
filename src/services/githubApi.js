@@ -9,6 +9,6 @@ export const getGithub = () => {
       html_url: user.html_url,
       repos_url: user.repos_url
     })
-      .then(console.log(res.json, 'jjjsssoonnn'))
+      .then(console.log(json, 'jjjsssoonnn'))
     ));
 };

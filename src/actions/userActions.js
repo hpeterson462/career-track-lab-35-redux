@@ -9,6 +9,6 @@ export const setUsers = users => ({
 export const fetchedUsers = () => dispatch => {
   getGithub()
     .then(users => {
-      dispatch(setUsers(users));
+      dispatch(setUsers(users))
     });
 };

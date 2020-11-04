@@ -6,6 +6,7 @@ import User from './User';
 
 const UserList = () => {
   const users = useSelector(state => state.users.list);
+  console.log(users, 'ssttttaaattee');
   const dispatch = useDispatch();
 
   useEffect(() => {
