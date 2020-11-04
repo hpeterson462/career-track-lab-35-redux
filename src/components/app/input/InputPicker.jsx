@@ -15,7 +15,7 @@ const InputPicker = () => {
     <>
       <Input
         text={state.text}
-        onSubmit={handleSubmit}
+        onClick={handleSubmit}
       />
       <Display text={state.text} />
     </>
