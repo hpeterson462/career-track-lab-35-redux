@@ -1,5 +1,10 @@
 import React from 'react';
+import Input from '../app/input/Input';
 
 export default function App() {
-  return <h1>Hello World</h1>;
+  return (
+    <>
+      <Input />
+    </>
+  );
 }
