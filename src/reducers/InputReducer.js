@@ -1,12 +1,12 @@
-import { TEXT_CHANGE } from '../actions/InputActions';
+import { TEXT_SUBMIT } from '../actions/InputActions';
 
 export const initialState = {
   text: ''
 };
 
-export default function reducer(state, action) {
+export default function reducer(state = initialState, action) {
   switch (action.type) {
-    case TEXT_CHANGE:
+    case TEXT_SUBMIT:
       return { ...state, text: action.payload };
     default:
       return state;
