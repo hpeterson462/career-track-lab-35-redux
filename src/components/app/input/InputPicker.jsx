@@ -1,7 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { textSubmit, fetchedUsers } from '../../../actions/InputActions';
-import reducer, { initialState } from '../../../reducers/InputReducer';
 import Input from './Input';
 import Display from './Display';
 
@@ -16,7 +15,7 @@ const InputPicker = () => {
 
   const handleChange = (event) => {
     dispatch(textSubmit(event.target.value));
-  }
+  };
 
   return (
     <>

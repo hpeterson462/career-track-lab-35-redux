@@ -6,8 +6,7 @@ const User = ({
   name,
   followers_url,
   following_url,
-  html_url,
-  repos_url
+  html_url
 }) => (
     <>
       <p>{login}</p>
@@ -15,7 +14,6 @@ const User = ({
       <p>{followers_url}</p>
       <p>{following_url}</p>
       <p>{html_url}</p>
-      <p>{repos_url}</p>
     </>
   );
 

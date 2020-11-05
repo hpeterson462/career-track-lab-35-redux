@@ -14,7 +14,7 @@ export const setUsers = users => ({
 
 export const fetchedUsers = (users) => dispatch => {
   return getGithub(users)
-    .then(users => {
-      dispatch(setUsers(users));
+    .then(userData => {
+      dispatch(setUsers(userData));
     });
 };

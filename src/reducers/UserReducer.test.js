@@ -13,8 +13,7 @@ describe('user reducer', () => {
       name: 'Heather Peterson',
       followers_url: 'https://api.github.com/users/hpeterson462/followers',
       following_url: 'https://api.github.com/users/hpeterson462/following{/other_user}',
-      html_url: 'https://github.com/hpeterson462',
-      repos_url: 'https://api.github.com/users/hpeterson462/repos'
+      html_url: 'https://github.com/hpeterson462'
     });
 
     const newState = reducer(state, action);
@@ -26,7 +25,6 @@ describe('user reducer', () => {
         followers_url: 'https://api.github.com/users/hpeterson462/followers',
         following_url: 'https://api.github.com/users/hpeterson462/following{/other_user}',
         html_url: 'https://github.com/hpeterson462',
-        repos_url: 'https://api.github.com/users/hpeterson462/repos'
       },
       error: null
     });
